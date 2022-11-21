@@ -11,9 +11,17 @@ public class tutorialmvmnt : MonoBehaviour
     public float sprspd = 4f;
     public float gravity = 9.81f;
     public bool isGrounded = false;
-    void Start()
+    public float baseFOV = 60f;
+    public float targetFOV = 100f;
+    public float accel = 1f;
+    private void OnEnable()
     {
-        
+        grounding.updateGround += updateGrounded;
+    }
+
+    private void OnDisable()
+    {
+        grounding.updateGround -= updateGrounded;
     }
 
     // Update is called once per frame
@@ -29,12 +37,21 @@ public class tutorialmvmnt : MonoBehaviour
         } else
         {
             controller.Move(move * spd * Time.deltaTime);
+
         }
+        if(!isGrounded)
+        {
+            //Physics.gravity = new Vector3(0, gravity, 0);
+            gravity -= accel;
+            controller.Move(new Vector3(0, gravity*Time.deltaTime, 0));
+        }
+        //Debug.Log(isGrounded);
         
     }
 
     void updateGrounded()
     {
+        Debug.Log("changings");
         isGrounded = true;
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\tutorialmvmnt.cs" />
+    <Compile Include="Assets\grounding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
