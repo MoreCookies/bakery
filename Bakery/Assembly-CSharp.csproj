@@ -59,8 +59,11 @@
     <Compile Include="Assets\CameraLook.cs" />
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\CameraController.cs" />
-    <Compile Include="Assets\tutorialmvmnt.cs" />
     <Compile Include="Assets\grounding.cs" />
+    <Compile Include="Assets\tutorialmvmnt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
