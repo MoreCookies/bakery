@@ -60,11 +60,12 @@ public class tutorialmvmnt : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Debug.Log("jumping");
-            gravity = jump;
+            controller.Move(Vector3.up * jump * Time.deltaTime);
+            //gravity = jump;
             isGrounded = false;
         }
         */
-        //Debug.Log(isGrounded);
+        Debug.Log(isGrounded);
         if(!isGrounded)
         {
             //Physics.gravity = new Vector3(0, gravity, 0);
@@ -74,7 +75,7 @@ public class tutorialmvmnt : MonoBehaviour
         {
             gravity = OrgGravity;
         }
-        //Debug.Log(isGrounded);
+        //Debug.Log(gravity);
         
     }
 

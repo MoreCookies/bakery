@@ -23,7 +23,7 @@ public class grounding : MonoBehaviour
         }
         updatedGrounded = false;
         */
-        if (Physics.Raycast(transform.position, Vector3.down, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, 0.2f))
         {
             updateGround();
         } else
